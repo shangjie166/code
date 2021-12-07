@@ -1,0 +1,1 @@
+CGO_ENABLED=0 GOARCH=amd64 go build  -o http_server  main.go
