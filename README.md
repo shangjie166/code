@@ -20,7 +20,7 @@ for i in `seq 1 10`;do echo "curl http://$dev2ip:$dev2port/boss/a &"|bash; done
 ## 说明
 linux3.10下
 
-###全连队列最大值
+### 全连队列最大值
 应用层设置backlog和内核参数somaxconn 二者中最小值
 ```
 min(somaxconn, backlog)
@@ -28,7 +28,7 @@ min(somaxconn, backlog)
 
 上述为理论值，实际值比理论值大1
 
-###半连接队列最大值
+### 半连接队列最大值
 计算规则为
 ```
 #1. 当 max_syn_backlog > min(somaxconn, backlog) 时， 半连接队列最大值 = roundup_pow_of_two(max(8, min(tcp_max_syn_backlog, min(backlog, somaxconn))) +1)
